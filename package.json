@@ -1,0 +1,42 @@
+{
+  "name": "koa-typescript-example",
+  "version": "0.0.1",
+  "description": "example REST API using Typescript, Koa, Sequlize",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc && nodemon ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UncleYee/koa-typescript-example.git"
+  },
+  "keywords": [
+    "koa",
+    "typescript"
+  ],
+  "author": "uncleye159@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UncleYee/koa-typescript-example/issues"
+  },
+  "homepage": "https://github.com/UncleYee/koa-typescript-example#readme",
+  "dependencies": {
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.46",
+    "@types/koa-bodyparser": "^4.2.0",
+    "@types/koa-router": "^7.0.28",
+    "@types/node": "^10.3.2",
+    "eslint": "^4.19.1",
+    "eslint-config-alloy": "^1.4.2",
+    "eslint-plugin-typescript": "^0.12.0",
+    "nodemon": "^1.17.5",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.1",
+    "typescript-eslint-parser": "^16.0.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        // 允许使用 console
+        "no-console": false,
+        // 不加分号
+        "semicolon": [true, "never"],
+        // 强制单引号
+        "quotemark": [true, "single"],
+         // 强制使用大括号
+        "curly": true,
+        // no-eval
+        "no-eval": true,
+        // 不允许使用未使用的表达式
+        "no-unused-expression": true,
+
+        "object-literal-sort-keys": false,
+        
+        "trailing-comma": false
+    },
+    "rulesDirectory": [
+        "./src"
+    ]
+}
