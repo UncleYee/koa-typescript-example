@@ -64,5 +64,6 @@ export default {
       ],
       "level": "all"
     }
-  }
+  },
+  "pm2": process.env.NODE_ENV === 'production'
 }

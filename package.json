@@ -24,10 +24,12 @@
   "homepage": "https://github.com/UncleYee/koa-typescript-example#readme",
   "dependencies": {
     "koa": "^2.5.1",
-    "koa-bodyparser": "^4.2.1",
+    "koa-body": "^4.0.4",
     "koa-compose": "^4.1.0",
     "koa-router": "^7.4.0",
-    "log4js": "^3.0.6"
+    "log4js": "^3.0.6",
+    "pm2-intercom": "^1.0.0",
+    "x2js": "^3.2.1"
   },
   "devDependencies": {
     "@types/koa": "^2.0.46",
@@ -36,6 +38,7 @@
     "@types/koa-router": "^7.0.28",
     "@types/log4js": "^2.3.5",
     "@types/node": "^10.3.2",
+    "@types/x2js": "^3.1.0",
     "cross-env": "^5.1.6",
     "eslint": "^4.19.1",
     "eslint-config-alloy": "^1.4.2",
