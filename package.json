@@ -27,6 +27,7 @@
     "koa-body": "^4.0.4",
     "koa-compose": "^4.1.0",
     "koa-router": "^7.4.0",
+    "lodash": "^4.17.11",
     "log4js": "^3.0.6",
     "pm2-intercom": "^1.0.0",
     "x2js": "^3.2.1"
@@ -36,6 +37,7 @@
     "@types/koa-bodyparser": "^4.2.0",
     "@types/koa-compose": "^3.2.2",
     "@types/koa-router": "^7.0.28",
+    "@types/lodash": "^4.14.117",
     "@types/log4js": "^2.3.5",
     "@types/node": "^10.3.2",
     "@types/x2js": "^3.1.0",

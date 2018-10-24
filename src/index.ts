@@ -4,13 +4,15 @@ import * as path from 'path'
 
 import {
   loggerMiddleware,
-  xmlMiddleware
+  xmlMiddleware,
+  originMiddleware
 } from './middleware/index'
 
 const app: Koa = new Koa()
 
 // 中间件
 app
+  .use(originMiddleware())
   .use(loggerMiddleware()) // log 中间件
   .use(KoaBody({
     multipart: true,

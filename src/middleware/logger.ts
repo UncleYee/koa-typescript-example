@@ -9,9 +9,9 @@ import logConfig from '../config/log4js'
 // 配置 log4js
 configure(logConfig)
 
-const logger = async (ctx: Context, next: () => void) => {
+const logger = (ctx: Context, next: () => void) => {
   connectLogger(getLogger('http'), { level: 'trace' })
-  await next()
+  next()
 }
 
 export const loggerMiddleware = () => compose([logger])
