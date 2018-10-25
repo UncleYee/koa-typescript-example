@@ -22,4 +22,4 @@ const handleXmlContext = async (ctx: Context, next: () => void) => {
   await next()
 }
 
-export const xmlMiddleware = () => compose([handleXmlContext])
+export const XmlRequest = () => compose([handleXmlContext])

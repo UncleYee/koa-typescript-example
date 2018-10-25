@@ -1,3 +1,4 @@
 export * from './logger'
-export * from './xml'
-export * from './origin'
+export * from './set-origin'
+export * from './xml-request'
+export * from './error-routes-catch'

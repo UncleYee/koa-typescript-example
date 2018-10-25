@@ -1,4 +1,4 @@
-// origin 中间件
+// origin(域) 中间件
 
 import { Context } from 'koa'
 import * as compose from 'koa-compose'
@@ -6,7 +6,7 @@ import * as _ from 'lodash'
 
 import {SYSTEM} from '../config/system'
 
-const handleOrigin = (ctx: Context, next: () => void) => {
+const handleOrigin = async (ctx: Context, next: () => void) => {
   if (ctx.request.method === 'OPTIONS') {
     ctx.response.status = 200
   }
@@ -20,7 +20,7 @@ const handleOrigin = (ctx: Context, next: () => void) => {
   ctx.set('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   ctx.set('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS')
   ctx.set('Access-Control-Allow-Credentials', 'true') // 允许带上 cookie
-  next()
+  await next()
 }
 
-export const originMiddleware = () => compose([handleOrigin])
+export const SetOrigin = () => compose([handleOrigin])
