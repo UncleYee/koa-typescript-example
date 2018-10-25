@@ -11,7 +11,6 @@ const handleOrigin = async (ctx: Context, next: () => void) => {
     ctx.response.status = 200
   }
   const host = _.get(ctx, 'request.host')
-  
   if (host && (host.split(':')[0] === 'localhost' || host.split(':')[0] === '127.0.0.1')) {
     ctx.set('Access-Control-Allow-Origin', '*')
   } else {

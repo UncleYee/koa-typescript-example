@@ -28,7 +28,7 @@ const config = convict({
     host: {
       doc: "Database host name/IP",
       format: '*',
-      default: 'server1.dev.test'
+      default: '127.0.0.1'
     },
     name: {
       doc: "Database name",
