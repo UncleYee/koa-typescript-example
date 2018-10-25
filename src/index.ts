@@ -8,13 +8,11 @@ import {
   SetOrigin,
   XmlRequest,
   ErrorRoutesCatch
-} from './middleware/index'
+} from './middleware'
 import MainRoutes from './routes/main-routes'
 import ErrorRoutes from './routes/error-routes'
 
 const app: Koa = new Koa()
-const env = process.env.NODE_ENV || 'development' // Current mode
-console.log(env)
 
 // 当 app.proxy 设置为 true 时，支持 X-Forwarded-Host 获取客户端的 ip
 app.proxy = true
