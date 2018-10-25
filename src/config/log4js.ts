@@ -6,8 +6,8 @@ export default {
     "trace": {
       "type": "dateFile",
       "encoding": "utf-8", // 设置文件编码格式
-      "filename": "logs/access-", // 设置log输出的文件路劲和文件名
-      "pattern": "yyyy-MM-dd.log", // 和上面同时使用 设置每天生成log名
+      "filename": "logs/", // 设置log输出的文件路径和文件名
+      "pattern": "yyyy-MM-dd/trace.log", // 和上面同时使用 设置每天生成log名
       "alwaysIncludePattern": true,
       "maxLogSize ": 31457280 // 设置文件大小
     },
@@ -21,8 +21,8 @@ export default {
     "info": {
       "type": "dateFile",
       "encoding": "utf-8",
-      "filename": "logs/info-",
-      "pattern": "yyyy-MM-dd.log",
+      "filename": "logs/",
+      "pattern": "yyyy-MM-dd/info.log",
       "alwaysIncludePattern": true,
       "layout": {
         "type": "pattern",
@@ -39,8 +39,8 @@ export default {
     "error": {
       "type": "dateFile",
       "encoding": "utf-8",
-      "filename": "logs/error-",
-      "pattern": "yyyy-MM-dd.log",
+      "filename": "logs/",
+      "pattern": "yyyy-MM-dd/error.log",
       "alwaysIncludePattern": true,
       "layout": {
         "type": "pattern",
