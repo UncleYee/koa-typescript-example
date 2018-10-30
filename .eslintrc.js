@@ -8,7 +8,7 @@ module.exports = {
   "parser": "typescript-eslint-parser",
   "plugins": ["typescript"],
   "rules": {
-    "indent": ["warn", 2],
+    "indent": "off", // ["warn", 2] 该项会导致vscode 提示 loc of undefined 问题 https://github.com/eslint/eslint/issues/11023
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
     "curly": [2, "all"],
@@ -43,7 +43,3 @@ module.exports = {
     "complexity": "off"
   }
 }
-
-
-
-// eslint-config-alloy/typescript 中的该项会导致vscode 提示 loc 问题 故重写

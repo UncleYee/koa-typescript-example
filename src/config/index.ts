@@ -1,6 +1,5 @@
 import * as convict from 'convict'
-import * as path from 'path'
-import {getLogger} from 'log4js'
+import { getLogger } from 'log4js'
 
 const logger = getLogger('config')
 
