@@ -25,10 +25,30 @@ const config = convict({
     arg: 'port'
   },
   db: {
+    type: {
+      doc: 'Database type',
+      format: String,
+      default: 'mysql'
+    },
     host: {
       doc: 'Database host name/IP',
       format: '*',
       default: '127.0.0.1'
+    },
+    port: {
+      doc: 'The port to connect database',
+      format: 'port',
+      default: 3306
+    },
+    username: {
+      doc: 'Database user',
+      format: String,
+      default: 'root'
+    },
+    password: {
+      doc: 'Database user password',
+      format: String,
+      default: '123456'
     },
     name: {
       doc: 'Database name',
