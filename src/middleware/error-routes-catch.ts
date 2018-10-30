@@ -18,4 +18,6 @@ const catchErrorRoutes = async (ctx: Context, next: () => Promise<void>) => {
   })
 }
 
-export const ErrorRoutesCatch = () => compose([])
+export const ErrorRoutesCatch = () => compose([
+  catchErrorRoutes
+])
