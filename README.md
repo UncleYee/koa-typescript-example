@@ -3,6 +3,7 @@
 Practice project using Koa and TypeScript
 
 ## Setup
+
 ```bash
   // clone repository
   $ git clone git@github.com:UncleYee/koa-typescript-example.git
@@ -18,6 +19,21 @@ Practice project using Koa and TypeScript
   $ npm run start:prod:pm2
   // delpoy project
   $ npm run deploy
+```
+
+## Run In Server
+
+```bash
+  // install pm2
+  $ npm install pm2 -g
+  // install typescript in pm2
+  $ pm2 install typescript
+  // to code folder
+  $ cd /path/to/production/folder
+  // install dependencies
+  $ npm i
+  // run
+  $ npm run start:prod:pm2
 ```
 
 ## License
