@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cross-env NODE_ENV=development nodemon src/index.ts",
-    "start": "cross-env NODE_ENV=production pm2 start ./dist/index.js -i 0 --name server-name"
+    "start": "cross-env NODE_ENV=development nodemon ./src/index.ts",
+    "start:pm2": "cross-env NODE_ENV=development pm2 start ./src/index.ts --name server-name",
+    "start:prod:pm2": "cross-env NODE_ENV=production pm2 start ./src/index.ts -i 0 --name server-name",
+    "deploy": "bash ./scripts/deploy.sh",
+    "dev": "pm2 start dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -31,7 +34,6 @@
     "koa-router": "^7.4.0",
     "lodash": "^4.17.11",
     "log4js": "^3.0.6",
-    "pm2-intercom": "^1.0.0",
     "sequelize": "^4.41.0",
     "x2js": "^3.2.1"
   },

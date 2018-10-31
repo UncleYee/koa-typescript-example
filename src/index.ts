@@ -11,6 +11,7 @@ import {
 } from './middleware'
 import MainRoutes from './routes/main-routes'
 import ErrorRoutes from './routes/error-routes'
+import config from './config'
 
 const app: Koa = new Koa()
 
@@ -37,6 +38,6 @@ app
   .use(MainRoutes.routes())
   .use(MainRoutes.allowedMethods())
   .use(ErrorRoutes())
-  .listen(3000)
+  .listen(config.get('port'))
 
 console.log('app is listen at prot 3000')
