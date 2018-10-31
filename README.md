@@ -11,7 +11,13 @@ Practice project using Koa and TypeScript
   // install dependencies
   $ npm i
   // run project
-  $ npm run dev
+  $ npm run start
+  // run project with pm2
+  $ npm run start:pm2
+  // run project in production environment with pm2
+  $ npm run start:prod:pm2
+  // delpoy project
+  $ npm run deploy
 ```
 
 ## License
