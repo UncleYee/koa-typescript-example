@@ -76,6 +76,6 @@ try {
 }
 
 // 验证 config
-config.validate({allowed: 'strict'})
+config.validate({ allowed: 'strict' })
 
 export default config
