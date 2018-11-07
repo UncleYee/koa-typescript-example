@@ -2,16 +2,14 @@
 
 import { Context } from 'koa'
 import * as compose from 'koa-compose'
-import { configure, connectLogger, getLogger } from 'log4js'
-
-import logConfig from '../config/log4js'
-
-// 配置 log4js
-configure(logConfig)
+import { getLogger } from 'log4js'
 
 const logger = async (ctx: Context, next: () => void) => {
-  connectLogger(getLogger('http'), { level: 'trace' })
+  const start = Number(new Date())
   await next()
+  const ms = Number(new Date()) - start
+  const { method, host, url, status, message } = ctx
+  getLogger('http').trace(`${method} ${url} ${host} ${status} ${message} - ${ms}ms`)
 }
 
 export const Logger = () => compose([logger])

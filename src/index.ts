@@ -2,6 +2,7 @@ import * as Koa from 'koa'
 import * as KoaBody from 'koa-body'
 import * as path from 'path'
 import * as KoaLogger from 'koa-logger'
+import { configure } from 'log4js'
 
 import {
   Logger,
@@ -12,8 +13,12 @@ import {
 import MainRoutes from './routes/main-routes'
 import ErrorRoutes from './routes/error-routes'
 import config from './config'
+import logConfig from './config/log4js'
 
 const app: Koa = new Koa()
+
+// 配置 log4js
+configure(logConfig)
 
 // 当 app.proxy 设置为 true 时，支持 X-Forwarded-Host 获取客户端的 ip
 app.proxy = true
