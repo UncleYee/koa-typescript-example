@@ -1,10 +1,10 @@
 // origin(域) 中间件
 
 import { Context } from 'koa'
-import * as compose from 'koa-compose'
-import * as _ from 'lodash'
+import compose from 'koa-compose'
+import _ from 'lodash'
 
-import config from '../config'
+import config from '../../config'
 
 const handleOrigin = async (ctx: Context, next: () => void) => {
   if (ctx.request.method === 'OPTIONS') {

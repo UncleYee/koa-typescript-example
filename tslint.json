@@ -1,0 +1,24 @@
+{
+  "extends": "tslint-config-alloy",
+  "rules": {
+    // 一个缩进必须用两个空格替代
+    "indent": [true, "spaces", 2],
+    // 定义过的变量必须使用
+    // @off 2.9之后，编译器自带
+    "no-unused-variable": false,
+    // 行尾必须没有分号
+    "semicolon": [true, "never"],
+    // 禁止无用的表达式
+    "no-unused-expression": [true, "allow-fast-null-checks"],
+    // 禁止对函数的参数重新赋值
+    "no-parameter-reassignment": false,
+    // 文件最后一行必须有一个空行
+    "eofline": true,
+    "return-undefined": false
+  },
+  "linterOptions": {
+    "exclude": [
+      "**/node_modules/**"
+    ]
+  }
+}

@@ -6,15 +6,34 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cross-env NODE_ENV=development nodemon ./src/index.ts",
-    "start:pm2": "cross-env NODE_ENV=development pm2 start ./src/index.ts --name server-name",
-    "start:prod:pm2": "cross-env NODE_ENV=production pm2 start ./src/index.ts -i 0 --name server-name",
+    "start:pm2": "cross-env NODE_ENV=development pm2 start ./src/index.ts --name house-server",
+    "start:prod:pm2": "cross-env NODE_ENV=production pm2 start ./src/index.ts -i 0 --name house-server",
     "build": "tsc",
     "deploy": "bash ./scripts/deploy.sh",
-    "dev": "pm2 start dist/index.js"
+    "dev": "pm2 start dist/index.js",
+    "lint": "tslint --project ./src/**/*.ts",
+    "precommit": "npm run lint"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/UncleYee/koa-typescript-example.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{js,ts}": [
+        "tslint",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "__test__/*",
+      "__mocks__/*"
+    ]
   },
   "keywords": [
     "koa",
@@ -27,35 +46,45 @@
   },
   "homepage": "https://github.com/UncleYee/koa-typescript-example#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "convict": "^4.4.0",
+    "crypto": "^1.0.1",
+    "ioredis": "^4.2.0",
     "koa": "^2.5.1",
     "koa-body": "^4.0.4",
     "koa-compose": "^4.1.0",
     "koa-logger": "^3.2.0",
     "koa-router": "^7.4.0",
+    "koa-session": "^5.10.0",
     "lodash": "^4.17.11",
     "log4js": "^3.0.6",
+    "mysql2": "^1.6.2",
+    "reflect-metadata": "^0.1.12",
     "sequelize": "^4.41.0",
+    "sequelize-typescript": "^0.6.6",
+    "uuid": "^3.3.2",
     "x2js": "^3.2.1"
   },
   "devDependencies": {
     "@types/convict": "^4.2.0",
+    "@types/ioredis": "^4.0.4",
     "@types/koa": "^2.0.46",
     "@types/koa-bodyparser": "^4.2.0",
     "@types/koa-compose": "^3.2.2",
     "@types/koa-logger": "^3.1.1",
     "@types/koa-router": "^7.0.28",
+    "@types/koa-session": "^5.7.4",
     "@types/lodash": "^4.14.117",
     "@types/node": "^10.3.2",
     "@types/sequelize": "^4.27.28",
-    "babel-eslint": "^10.0.1",
+    "@types/uuid": "^3.4.4",
     "cross-env": "^5.1.6",
-    "eslint": "^4.19.1",
-    "eslint-config-alloy": "^1.4.2",
-    "eslint-plugin-typescript": "^0.12.0",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.0.5",
     "nodemon": "^1.17.5",
     "ts-node": "^7.0.1",
-    "typescript": "^2.9.1",
-    "typescript-eslint-parser": "^16.0.0"
+    "tslint": "^5.11.0",
+    "tslint-config-alloy": "^0.1.0",
+    "typescript": "^2.9.1"
   }
 }

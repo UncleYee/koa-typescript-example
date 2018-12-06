@@ -5,23 +5,28 @@
   "exclude": [
     "node_modules",
     "**/*.spec.ts",
-    "dist"
+    "dist",
   ],
   "compilerOptions": {
     "lib": ["es2015","es2016","es2017","dom"],
-    "target": "es6",
     "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
     "moduleResolution": "node",
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "sourceMap": true,
     "outDir": "dist",
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "types": [
-      "node"
+      "node",
+      "koa",
+      "koa-session",
+      "koa-body",
+      "koa-router"
     ],
     "typeRoots": [
-      "node_modules/**/*",
-      "node_modules/@types"
+      "./node_module/@types"
     ]
   }
 }

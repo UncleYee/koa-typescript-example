@@ -1,4 +1,4 @@
-import * as convict from 'convict'
+import convict from 'convict'
 import { getLogger } from 'log4js'
 
 const logger = getLogger('config')

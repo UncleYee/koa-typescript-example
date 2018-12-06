@@ -1,4 +1,5 @@
 export * from './logger'
 export * from './set-origin'
 export * from './xml-request'
-export * from './error-routes-catch'
+export * from './error-routes'
+export * from './session'

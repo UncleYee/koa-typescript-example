@@ -1,9 +1,13 @@
 // 错误路由捕获中间件
 
 import { Context } from 'koa'
-import * as compose from 'koa-compose'
+import compose from 'koa-compose'
 
-import { RoutesError } from '../schema/error'
+interface RoutesError {
+  status: number
+  message?: string
+  [title: string]: any
+}
 
 const catchErrorRoutes = async (ctx: Context, next: () => Promise<void>) => {
   await next().catch((err: RoutesError) => {
@@ -13,11 +17,11 @@ const catchErrorRoutes = async (ctx: Context, next: () => Promise<void>) => {
         ctx.body = '没有找到内容 - 404'
         break
       default:
-        break;
+        break
     }
   })
 }
 
-export const ErrorRoutesCatch = () => compose([
+export const ErrorRoutes = () => compose([
   catchErrorRoutes
 ])
