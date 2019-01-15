@@ -8,7 +8,7 @@
     "start": "cross-env NODE_ENV=development nodemon ./src/index.ts",
     "start:pm2": "cross-env NODE_ENV=development pm2 start ./src/index.ts --name house-server",
     "start:prod:pm2": "cross-env NODE_ENV=production pm2 start ./src/index.ts -i 0 --name house-server",
-    "build": "tsc",
+    "build": "tsc -p tsconfig.json",
     "deploy": "bash ./scripts/deploy.sh",
     "dev": "pm2 start dist/index.js",
     "lint": "tslint --project ./src/**/*.ts",
