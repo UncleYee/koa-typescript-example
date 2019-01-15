@@ -1,5 +1,7 @@
 import convict from 'convict'
 import { getLogger } from 'log4js'
+import dev from './env/development.json'
+import prod from './env/production.json'
 
 const logger = getLogger('config')
 
