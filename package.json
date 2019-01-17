@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cross-env NODE_ENV=development nodemon ./src/index.ts",
-    "start:pm2": "cross-env NODE_ENV=development pm2 start ./src/index.ts --name house-server",
-    "start:prod:pm2": "cross-env NODE_ENV=production pm2 start ./src/index.ts -i 0 --name house-server",
+    "start:pm2": "npm run build && cross-env NODE_ENV=development pm2 start ./dist/index.js --name server",
+    "start:prod:pm2": "npm run build && cross-env NODE_ENV=production pm2 start ./dist/index.js -i 0 --name server",
     "build": "tsc -p tsconfig.json",
     "deploy": "bash ./scripts/deploy.sh",
     "dev": "pm2 start dist/index.js",
