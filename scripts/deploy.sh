@@ -1,9 +1,9 @@
 ### server username
-name = 'root' 
+name='root' 
 ### server host
-host = '127.0.0.1'
+host='127.0.0.1'
 ### target folder
-path = '/path/to/production/folder'
+path='/path/to/production/folder'
 
 ### transfer source code to server
 scp -r src $name@$host:$path
@@ -12,3 +12,4 @@ scp -r src $name@$host:$path
 scp package.json $name@$host:$path
 
 ### transfer tsconfig.json to server
+scp tsconfig.json $name@$host:$path
