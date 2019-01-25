@@ -72,7 +72,7 @@
     "@types/koa-bodyparser": "^4.2.0",
     "@types/koa-compose": "^3.2.2",
     "@types/koa-logger": "^3.1.1",
-    "@types/koa-router": "^7.0.28",
+    "@types/koa-router": "^7.0.33",
     "@types/koa-session": "^5.7.4",
     "@types/lodash": "^4.14.117",
     "@types/node": "^10.3.2",
